@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Mi Sitio Django{% endblock %}</title>
+</head>
+<body style="background-color:black; color: aqua; font-family: 'poppins', sans-serif; font-size: 20px;">
+    <h1>Preentrega 3 Django</h1>
+    <nav>
+        <a style="color: aqua;" href="/">Inicio</a> |
+        <a style="color: aqua;" href="/crear_curso/">Crear Curso</a> |
+        <a style="color: aqua;" href="/crear_profesor/">Crear Profesor</a> |
+        <a style="color: aqua;" href="/crear_estudiante/">Crear Estudiante</a> |
+        <a style="color: aqua;" href="/buscar_curso/">Buscar Curso</a>
+    </nav>
+    <hr>
+    {% block content %}{% endblock %}
+</body>
+</html>

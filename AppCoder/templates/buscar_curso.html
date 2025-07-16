@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}Buscar Curso{% endblock %}
+{% block content %}
+<form method="get">
+    {{ form.as_p }}
+    <button type="submit">Buscar</button>
+</form>
+{% if resultado %}
+    <h3>Resultados:</h3>
+    <ul>
+        {% for curso in resultado %}
+            <li>{{ curso.nombre }} - Camada: {{ curso.camada }}</li>
+        {% endfor %}
+    </ul>
+{% elif resultado is not None %}
+    <p>No se encontraron cursos.</p>
+{% endif %}
+{% endblock %}
